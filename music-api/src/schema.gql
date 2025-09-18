@@ -1,0 +1,71 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Song {
+  id: Int!
+  title: String!
+  duration: Int!
+  trackNumber: Int
+  lyrics: String
+  likes: Int!
+  album: Album!
+  artists: [Artist!]!
+}
+
+type Artist {
+  id: Int!
+  name: String!
+  bio: String
+  country: String
+  debutYear: Int
+  albums: [Album!]!
+  songs: [Song!]!
+}
+
+type Album {
+  id: Int!
+  title: String!
+  releaseDate: String!
+  genre: String
+  coverUrl: String
+  artist: Artist!
+  songs: [Song!]!
+}
+
+type Query {
+  albums: [Album!]!
+  artists: [Artist!]!
+  songs: [Song!]!
+}
+
+type Mutation {
+  createAlbum(input: CreateAlbumInput!): Album!
+  createArtist(input: CreateArtistInput!): Artist!
+  createSong(input: CreateSongInput!): Song!
+  likeSong(id: Int!): Song!
+}
+
+input CreateAlbumInput {
+  title: String!
+  releaseDate: String!
+  genre: String
+  coverUrl: String
+  artistId: Int!
+}
+
+input CreateArtistInput {
+  name: String!
+  bio: String
+  country: String
+  debutYear: Int
+}
+
+input CreateSongInput {
+  title: String!
+  duration: Int!
+  trackNumber: Int
+  lyrics: String
+  albumId: Int!
+  artistIds: [Int!]!
+}
