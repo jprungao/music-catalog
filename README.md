@@ -4,6 +4,8 @@ A full-stack project built with:
 
 - **Backend**: NestJS, TypeScript, GraphQL, TypeORM, PostgreSQL (Docker)
 - **Frontend**: React, TypeScript, Vite, Apollo Client, Chakra UI
+- 
+<img width="914" height="440" alt="image" src="https://github.com/user-attachments/assets/cee46ca0-3184-4c1b-a007-c3a31549a0f4" />
 
 ---
 
